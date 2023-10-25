@@ -31,22 +31,30 @@ const GridHeader = styled.header`
 
 const Grid = styled.div<{ expanded: boolean }>`
   display: inline-grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   gap: 1.3rem;
   margin-top: ${(props) => (props.expanded ? "1rem" : "0")};
   max-height: ${(props) => (props.expanded ? "100vh" : "0px")};
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 `;
 
 const GridHeading = styled.h2`
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #fff;
   font-family: "Gabarito", sans-serif;
   text-align: center;
   margin: 0;
   letter-spacing: 0.2rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const CharacterIcon = styled.img`
