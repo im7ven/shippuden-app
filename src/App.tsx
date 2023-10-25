@@ -15,11 +15,10 @@ const Layout = styled.div`
 
 function App() {
   useCharacters();
+
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(
     null
   );
-
-  const [animate, setAnimate] = useState(true);
 
   const handleSelectedCharacter = (character: Character) => {
     if (character === selectedCharacter) {
@@ -31,6 +30,7 @@ function App() {
     }, 400);
   };
 
+  const [animate, setAnimate] = useState(true);
   useEffect(() => {
     if (selectedCharacter) {
       setTimeout(() => setAnimate(true), 100);
