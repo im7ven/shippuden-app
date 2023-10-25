@@ -4,7 +4,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 
 const GridWrapper = styled.section<{ expanded: boolean }>`
-  padding: ${(props) => (props.expanded ? " 0 2.4rem 2.4rem  " : "0 0.8rem")};
+  padding: ${(props) => (props.expanded ? " 0 2.4rem 2.4rem  " : "0 1.3rem")};
   background: #1a1a1a;
   border-bottom: 1px solid #fff;
   border-left: 1px solid #fff;
