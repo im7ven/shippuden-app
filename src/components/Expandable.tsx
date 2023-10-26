@@ -3,9 +3,13 @@ import styled from "styled-components";
 
 const ExpandableText = styled.p`
   font-family: "Gabarito", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   line-height: 2.4rem;
   margin: 0;
+
+  @media screen and (min-width: 550px) {
+    font-size: 1.7rem;
+  }
 `;
 
 const ExpandableBtn = styled.button`
