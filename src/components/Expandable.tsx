@@ -6,9 +6,11 @@ const ExpandableText = styled.p`
   font-size: 1.5rem;
   line-height: 2.4rem;
   margin: 0;
+  text-align: center;
 
   @media screen and (min-width: 550px) {
     font-size: 1.7rem;
+    text-align: left;
   }
 `;
 
