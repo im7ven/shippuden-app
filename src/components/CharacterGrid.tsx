@@ -11,14 +11,13 @@ const GridWrapper = styled.section<{ expanded: boolean }>`
   border-right: 1px solid #fff;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   transition: padding 0.5s;
-
-  @media screen and (min-width: );
 `;
+
 const GridHeader = styled.header`
   display: flex;
   max-width: 30rem;
