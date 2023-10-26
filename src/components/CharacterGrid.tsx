@@ -34,7 +34,7 @@ const Grid = styled.div<{ expanded: boolean }>`
   grid-template-rows: 1fr;
   gap: 1.3rem;
   margin-top: ${(props) => (props.expanded ? "1rem" : "0")};
-  max-height: ${(props) => (props.expanded ? "100vh" : "0px")};
+  max-height: ${(props) => (props.expanded ? "37.2rem" : "0px")};
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 
