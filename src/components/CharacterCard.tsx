@@ -6,16 +6,27 @@ import { Character, Characters } from "../types/Character";
 import Expandable from "./Expandable";
 
 const CardContainer = styled.section`
-  display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: auto, auto;
+  display: flex;
+  flex-direction: column;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: auto;
   align-items: center;
   background: #000;
-  width: 58rem;
+  max-width: 60rem;
+  width: 100%;
   color: #fff;
   border-radius: 25px;
   padding: 3rem 0 0;
   box-shadow: 0 2px 5px 1px #1b1b1b;
+  position: relative;
+  margin: 30rem auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 10rem auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto, auto;
+  }
 `;
 
 const CardContent = styled.div`
@@ -23,10 +34,23 @@ const CardContent = styled.div`
 `;
 
 const CharacterImage = styled.img`
-  max-width: 35rem;
-  transform: translateX(-50%);
-  max-height: 50rem;
-  min-height: 40rem;
+  position: absolute;
+  max-width: 32rem;
+  transform: translatey(-52%);
+  top: 0;
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    max-width: 35rem;
+    transform: translateX(-50%);
+    max-height: 50rem;
+    min-height: 40rem;
+    position: initial;
+    z-index: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+  }
 `;
 
 const CardHeader = styled.header`
@@ -81,7 +105,6 @@ const Village = styled.p`
 const StatWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-
   margin: 2.4rem 0 1rem;
 `;
 
@@ -117,7 +140,7 @@ const Stat = styled.p`
 const CardFooter = styled.footer`
   margin-top: 2rem;
   background: #2c2c2c;
-
+  width: 100%;
   grid-area: 2 / 1 / 3 / 3;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
