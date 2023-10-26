@@ -26,7 +26,7 @@ const GridHeader = styled.header`
   align-items: center;
   gap: 2rem;
   margin: 0 auto;
-  transform: translatey(0.1rem);
+  transform: translatey(0.4rem);
 `;
 
 const Grid = styled.div<{ expanded: boolean }>`
