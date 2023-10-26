@@ -8,11 +8,9 @@ import Expandable from "./Expandable";
 const CardContainer = styled.section`
   display: flex;
   flex-direction: column;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: auto;
   align-items: center;
   background: #000;
-  max-width: 60rem;
+  max-width: 56rem;
   width: 100%;
   color: #fff;
   border-radius: 25px;
@@ -21,16 +19,25 @@ const CardContainer = styled.section`
   position: relative;
   margin: 30rem auto;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 965px) {
     margin: 10rem auto;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: auto, auto;
+    max-width: 60rem;
   }
 `;
 
 const CardContent = styled.div`
-  padding: 0 3rem 0 1rem;
+  padding: 0 2rem;
+
+  @media screen and (min-width: 550px) {
+    padding: 0 2.6rem;
+  }
+
+  @media screen and (min-width: 965px) {
+    padding: 0 3rem 0 0;
+  }
 `;
 
 const CharacterImage = styled.img`
@@ -40,7 +47,7 @@ const CharacterImage = styled.img`
   top: 0;
   z-index: -1;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 965px) {
     max-width: 35rem;
     transform: translateX(-50%);
     max-height: 50rem;
@@ -56,38 +63,64 @@ const CharacterImage = styled.img`
 const CardHeader = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-b
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+
+  @media screen and (min-width: 550px) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
 `;
 
 const StatusOverline = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Gabarito", sans-serif;
   letter-spacing: 1.3rem;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 0;
   color: #37d17f;
+  width: 100%;
+  text-align: center;
 
   &.deceased {
     color: #ff4a4a;
+  }
+
+  @media screen and (min-width: 550px) {
+    font-size: 1.5rem;
+    width: initial;
+    order: 2;
   }
 `;
 
 const CharacterName = styled.h2`
   font-family: "Neuton", serif;
   font-weight: 900;
-  font-size: 4.5rem;
+  font-size: 3rem;
   margin: 0;
   line-height: 3.4rem;
+  order: 2;
+  text-align: center;
   max-width: 24.5rem;
+
+  @media screen and (min-width: 550px) {
+    text-align: left;
+    font-size: 4.5rem;
+  }
 `;
 
 const VillageContainer = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
   margin-top: 1rem;
+
+  @media screen and (min-width: 550px) {
+    justify-content: start;
+  }
 `;
 
 const VillageIcon = styled.img`
@@ -98,8 +131,12 @@ const VillageIcon = styled.img`
 const Village = styled.p`
   margin: 0;
   font-family: "Gabarito", sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #cdbef0;
+
+  @media screen and (min-width: 550px) {
+    font-size: 2rem;
+  }
 `;
 
 const StatWrapper = styled.div`
@@ -109,7 +146,7 @@ const StatWrapper = styled.div`
 `;
 
 const StatLabel = styled.h3`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   font-family: "Gabarito", sans-serif;
   margin: 0;
@@ -120,10 +157,14 @@ const StatLabel = styled.h3`
     margin-bottom: 0.8rem;
     color: #d7d7d7;
   }
+
+  @media screen and (min-width: 550px) {
+    font-size: 2rem;
+  }
 `;
 
 const Stat = styled.p`
-  font-size: 5rem;
+  font-size: 4rem;
   align-self: center;
   background-image: linear-gradient(
     180deg,
@@ -135,6 +176,10 @@ const Stat = styled.p`
   margin: 0;
   font-family: "Gabarito", sans-serif;
   font-weight: 700;
+
+  @media screen and (min-width: 550px) {
+    font-size: 5rem;
+  }
 `;
 
 const CardFooter = styled.footer`
