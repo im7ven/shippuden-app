@@ -4,6 +4,11 @@ import CharacterGrid from "./components/CharacterGrid";
 import { GlobalStyles } from "./styles.global";
 import { Character } from "./types/Character";
 import useCharacters from "./hooks/useCharacter";
+import styled from "styled-components";
+
+const PagePadding = styled.div`
+  padding: 0 2.4rem;
+`;
 
 function App() {
   useCharacters();
@@ -32,12 +37,14 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <CharacterCard
-        animate={animate}
-        key={selectedCharacter?.id}
-        character={selectedCharacter}
-      />
-      <CharacterGrid onSelectedCharacter={handleSelectedCharacter} />
+      <PagePadding>
+        <CharacterCard
+          animate={animate}
+          key={selectedCharacter?.id}
+          character={selectedCharacter}
+        />
+        <CharacterGrid onSelectedCharacter={handleSelectedCharacter} />
+      </PagePadding>
     </>
   );
 }
